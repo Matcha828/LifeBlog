@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+    /*font-family: 'PT Sans', sans-serif;*/
+    font-family: 'Lobster', cursive;
+    padding: 20px;
+    background: #f1f1f1;
+
+}
+h1{
+    font-size: 2em;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+p{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+}
+
+img{
+    border-style: none;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Navbar*/
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color:  #33383b;
+
+}
+/* Header/LifeBlog Title */
+.header {
+    padding: 150px;
+    font-size: 40px;
+    text-align: center;
+    /*background: #f1f1f1;*/
+    background-image: url("assets/images/header.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: 3%;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer-distributed{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+
+    padding: 15px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+    color:  #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+    font-size:18px;
+    font-weight: bold;
+    color:  #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-right{
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-right{
+        text-align: center;
+    }
+
+    .footer-distributed .footer-right{
+        float: none;
+        margin: 0 auto 20px;
+    }
+
+    .footer-distributed .footer-left p.footer-links{
+        line-height: 1.8;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
